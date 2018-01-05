@@ -1,0 +1,145 @@
+	.v-hd2,.s-bg,.n-disk li{
+		background: url(/static/images/discover/recommend/core/index.png) no-repeat 0 9999px;
+	}
+	.v-hd2 {
+	    height: 33px;
+	    padding: 0 10px 0 34px;
+	    background-position: -225px -156px;
+	    border-bottom: 2px solid #C10D0C;
+	    .tit{
+	    	    float: left;
+			    font-size: 20px;
+			    font-weight: normal;
+			    line-height: 28px;
+	    }
+	    .tab{
+	    	float: left;
+   			margin: 7px 0 0 20px;
+   			.line{
+   				margin: 0 10px;
+    			color: #ccc;
+   			}
+	    }
+	    .more{
+	    	float: right;
+		    margin-top: 9px;
+		    _margin-top: 11px;
+	    }
+	}
+	.v-hd2 .more .cor, .v-hd3 .more .cor {
+	    display: inline-block;
+	    width: 12px;
+	    height: 12px;
+	    margin-left: 4px;
+	    vertical-align: middle;
+	}
+	.v-hd3 {
+	    position: relative;
+	    height: 23px;
+	    margin: 0 20px;
+	    border-bottom: 1px solid #ccc;
+	    color: #333;
+	}
+	.f-fl {
+	    float: left;
+	}
+	.s-bg-6 {
+	    background-position: 0 -240px;
+	}
+	.u-cover{
+		 position: relative;
+	    display: block;
+	    img{
+	    	display: block;
+		    width: 100%;
+		    height: 100%;
+	    }
+	    .msk{
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+	    }
+	}
+	.u-cover .msk{
+		background: url(/static/images/discover/recommend/core/coverall.png) no-repeat ;
+	}
+	.f-thide {
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    word-wrap: normal;
+	}
+	.f-fs1 {
+	    font-size: 14px;
+	}
+	.s-fc0, a.s-fc0:hover {
+	    color: #000;
+	}
+
+	.u-icn, .u-title-1 .out .icon {
+	    background: url(/static/images/discover/icon.png) no-repeat 0 9999px;
+	}
+	.u-icn, .u-icn2, .u-icn3 {
+	    display: inline-block;
+	    overflow: hidden;
+	    vertical-align: middle;
+	}
+	.u-icn-81 {
+	    width: 13px;
+	    height: 13px;
+	    background-position: 0 -700px;
+	}
+	.s-bg-1 {
+	    background-position: 0 0;
+	}
+	.s-bg-2 {
+	    background-position: 0 -195px;
+	}
+	.s-fc3, a.s-fc3:hover {
+	    color: #666;
+	}
+	.u-btn2,.u-btn2 i{
+		background:url(/static/images/discover/button2.png) no-repeat 0 9999px;
+	}
+	.u-btn2, .u-btn2 i {
+	    display: inline-block;
+	    height: 31px;
+	    line-height: 31px;
+	    overflow: hidden;
+	    vertical-align: top;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	.n-singer .u-btn2 {
+    margin-left: 20px;
+    border-radius: 4px;
+	}
+
+	.u-btn2-1 {
+	    color: #333;
+	    background-position: right -100px;
+	}
+
+	.u-btn2, .u-btn2:hover {
+	    text-decoration: none;
+	}
+
+	.u-btn2 {
+	    padding: 0 5px 0 0;
+	    white-space: nowrap;
+	}
+	.n-singer .u-btn2 i {
+    width: 170px;
+    font-weight: bold;
+	}
+
+	.u-btn2-1 i {
+	    color: #333;
+	    background-position: 0 -59px;
+	}
+	.u-btn2 i {
+	    padding: 0 15px 0 20px;
+	    pointer-events: none;
+	}
