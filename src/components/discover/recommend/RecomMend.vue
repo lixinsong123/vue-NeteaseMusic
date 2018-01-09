@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<v-bar></v-bar>
+		<v-goTop></v-goTop>
 		<div class="g-bd1 f-cb clear">
 			<div class="g-mn1">
 				<div class="g-mn1c">
@@ -22,6 +23,7 @@
 			<div class="g-sd1">
 				<v-login></v-login>
 				<v-singer></v-singer>
+				<v-hotAnchor></v-hotAnchor>
 			</div>
 		</div>
 	</div>	
@@ -38,6 +40,10 @@
 	import Login        from '@/moduleComponent/discover/Login'
 	//入驻歌手组件
 	import InSinger     from '@/moduleComponent/discover/InSinger';
+	//热门主播
+	import Hotanchor    from '@/moduleComponent/discover/Hotanchor';
+	//返回顶部
+	import GoTop        from '@/moduleComponent/tools/GoTop';
 	export default {
 	  name: 'RecomMend',
 	  data() {
@@ -50,7 +56,9 @@
 	    'v-new'     : NewDisc,
 	    'v-list'    : List,
 	    'v-login'   : Login,
-	    'v-singer'  : InSinger
+	    'v-singer'  : InSinger,
+		'v-hotAnchor' : Hotanchor,
+		'v-goTop'     : GoTop
 	  }	
 	}
 </script>

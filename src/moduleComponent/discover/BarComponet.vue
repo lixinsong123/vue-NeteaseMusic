@@ -1,5 +1,6 @@
 <template>
 	<div v-bind:style="barBackground" class="n-bar">
+		<v-snow></v-snow>
 		<div id="sss" class="barWrap" 
 				@mouseover ='clearTime()'
 				@mouseout = 'openTime()'
@@ -37,7 +38,11 @@
 	</div>
 </template>
 <script>
+import Snow from '@/moduleComponent/effect/Snow';
 export default {
+	 components : {
+	'v-snow'     : Snow,
+	},
   data() {
   		return {
   			barBackground : {
