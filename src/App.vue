@@ -31,7 +31,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-size: 12px;
 }
-body,ul,li,h1,p,h3,ol,dd,dl,h4,h3,h5{
+body,ul,li,h1,p,h3,ol,dd,dl,h4,h3,h5,h2{
       padding: 0;
       margin:0;
 }

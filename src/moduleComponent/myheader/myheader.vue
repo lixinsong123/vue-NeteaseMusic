@@ -8,10 +8,13 @@
               <ul class="m-nav clear">
                   <li v-for="(item,index) in routerNav ">
                     <span>
-                      <a v-bind:href="item.href" 
+                      <a 
+                         
                          v-bind:class="{'checked':item.isChecked==true,'z-slt':item.isChecked==true}"
-                         @click="selectChecked(index)"
+                         @click="selectChecked(index,item.href)"
                       >
+                        <!--   :to="item.href"
+                          active-class="isChecked" -->
                         <em>{{item.name}}</em>
                         <sub class="cor">&nbsp;</sub>
                       </a>
@@ -86,10 +89,8 @@
           <ul class="nav">
             <li v-for = "(item,index) in middleNav">
                 <a 
-                  v-bind:href="item.href" 
                   v-bind:class="{'z-slt' : item.isBind === true}"
-                  @click = "middleNavFn(index)"
-                  
+                  @click = "middleNavFn(index,item.href)"
                   >
                   <em>{{item.name}}</em>
                 </a>
@@ -109,17 +110,17 @@
       return {
         //路由数组
         routerNav : [
-            {'name':'发现音乐',isChecked:true,'href':'javascript:;',isHot:false},
-            {'name':'我的音乐',isChecked:false,'href':'javascript:;',isHot:false},
-            {'name':'朋友',isChecked:false,'href':'javascript:;',isHot:false},
+            {'name':'发现音乐',isChecked:true,'href':'discover',isHot:false},
+            {'name':'我的音乐',isChecked:false,'href':'my',isHot:false},
+            {'name':'朋友',isChecked:false,'href':'friend',isHot:false},
             {'name':'商城',isChecked:false,'href':'http://music.163.com/store/product',isHot:false},
             {'name':'音乐人',isChecked:false,'href':'http://music.163.com/nmusician/web/index',isHot:false},
             {'name':'下载客户端',isChecked:false,'href':'javascript:;',isHot:true},
         ],
         //发现音乐下导航数组
         middleNav : [
-          {'name' : '推荐','href' : 'javascript:;','isBind' : true},
-          {'name' : '排行榜','href' : 'javascript:;','isBind' : false},
+          {'name' : '推荐','href' : 'recommend','isBind' : true},
+          {'name' : '排行榜','href' : 'toplist','isBind' : false},
           {'name' : '歌单','href' : 'javascript:;','isBind' : false},
           {'name' : '主播电台','href' : 'javascript:;','isBind' : false},
           {'name' : '歌手','href' : 'javascript:;','isBind' : false},
@@ -140,7 +141,7 @@
     },
     methods : {
       //导航切换判断
-      selectChecked(index){
+      selectChecked(index,href){
         for(var i=0,len=this.routerNav.length;i<len;i++){
           this.routerNav[i].isChecked=false;
         }
@@ -149,7 +150,13 @@
         }else{
             this.secondNav = false;
         }
+         for(var i=0,len=this.middleNav.length;i<len;i++){
+          this.middleNav[i].isBind=false;
+        }
+        this.middleNav[0].isBind=true;
         this.routerNav[index].isChecked=true;
+        //路由跳转
+        this.$router.push({ path: '/'+href});
       },
       //音乐搜索
       musicSerach(){
@@ -160,11 +167,14 @@
           this.musicSerachDefult.content = '音乐/视频/电台/用户';
           this.musicSerachDefult.state = false;
       },
-      middleNavFn(index){
+      middleNavFn(index,href){
         for(var i=0,len=this.middleNav.length;i<len;i++){
           this.middleNav[i].isBind=false;
         }
         this.middleNav[index].isBind=true;
+        var reHref = '/discover/'+href;
+        //路由跳转
+        this.$router.push({ path: reHref});
       }
     },
     directives: {
